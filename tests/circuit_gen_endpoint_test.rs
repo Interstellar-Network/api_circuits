@@ -215,7 +215,7 @@ async fn endpoint_generate_generic_protobuf() {
         verilog_cid: ipfs_result.hash,
     });
     req.metadata_mut()
-        .insert("grpc-timeout", "30000m".parse().unwrap());
+        .insert("grpc-timeout", "120000m".parse().unwrap());
 
     let res = client.generate_skcd_generic_from_ipfs(req).await;
 

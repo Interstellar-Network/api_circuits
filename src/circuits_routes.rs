@@ -28,13 +28,15 @@ use tempfile::Builder;
 use tonic::{Request, Response, Status};
 
 // https://github.com/neoeinstein/protoc-gen-prost/issues/26
-#[allow(clippy::derive_partial_eq_without_eq)]
-#[allow(clippy::unwrap_used)]
-#[allow(clippy::missing_errors_doc)]
-#[allow(clippy::wildcard_imports)]
-#[allow(clippy::doc_markdown)]
-#[allow(clippy::similar_names)]
-#[allow(clippy::default_trait_access)]
+#[allow(
+    clippy::unwrap_used,
+    clippy::missing_errors_doc,
+    clippy::wildcard_imports,
+    clippy::doc_markdown,
+    clippy::default_trait_access,
+    clippy::similar_names,
+    clippy::too_many_lines
+)]
 pub mod interstellarpbapicircuits {
     tonic::include_proto!("interstellarpbapicircuits");
 }

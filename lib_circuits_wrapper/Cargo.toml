@@ -16,7 +16,7 @@ cmake = "0.1"
 rust-cxx-cmake-bridge = { git = "https://github.com/Interstellar-Network/rust-cxx-cmake-bridge.git" }
 
 [dev-dependencies]
-tempfile = "3.3.0"
+tempfile = "3.6.0"
 
 [lib]
 name = "lib_circuits_wrapper"

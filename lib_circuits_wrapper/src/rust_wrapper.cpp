@@ -43,8 +43,12 @@ SkcdAndMetadata GenerateDisplaySkcdWrapper::GenerateDisplaySkcd(uint32_t width, 
                                     digits_bboxes[i + 2], digits_bboxes[i + 3]);
   }
 
+  // bool has_watermark: hardcoded to "true" for now b/c it was just for testing purposes
+  //  It is only useful if "Free-XOR" opt is implemented.
+  //  Also we will probabably completely change the circuits/Verilog in the next milestone.
   auto buf_str = interstellar::circuits::GenerateDisplaySkcd(width, height,
                                                              interstellar::circuits::DisplayDigitType::seven_segments_png,
+                                                             true,
                                                              std::move(digits_bboxes_copy));
 
   rust::Vec<u_int8_t> vec;

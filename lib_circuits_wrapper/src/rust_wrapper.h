@@ -42,8 +42,6 @@ public:
   rust::Vec<u_int8_t> GenerateGenericSkcd(rust::Str verilog_input_path) const;
 
 private:
-  // TODO dynamic
-  bool allow_cache_ = false;
 };
 
 std::unique_ptr<GenerateDisplaySkcdWrapper> new_circuit_gen_wrapper();
